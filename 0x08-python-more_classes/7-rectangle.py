@@ -6,8 +6,9 @@ class Rectangle:
     """
     class that generate a rectangle
     """
+
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Constructor initialize the class rectangle
@@ -94,16 +95,14 @@ class Rectangle:
         for row in range(self.__height):
             for col in range(self.__width):
                 string = string + str(self.print_symbol)
-            string = string + '\n'
+            string = string + "\n"
         return string[:-1]
 
     def __repr__(self):
-        """Rerurn string of the rectangle
-        """
+        """Rerurn string of the rectangle"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Delete instance of the rectangle
-        """
+        """Delete instance of the rectangle"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
