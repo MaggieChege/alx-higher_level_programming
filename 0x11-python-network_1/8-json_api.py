@@ -20,5 +20,10 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(r_dict.get("id"), r_dict.get("name")))
+    # except requests.exceptions.RequestException as e:
+    #     print("No result")
+    except requests.exceptions.ConnectionError as e:
+        raise SystemExit(e)
+
     except:
         print("Not a valid JSON")
